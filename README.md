@@ -12,13 +12,13 @@ Note that installing it with `go get` will take some time.
 
 ## Prep
 
-Create the config dir
+Create the config dir:
 
 ```
 mkdir -p ~/.config/azure-dns-manager
 ```
 
-Generate the Azure auth file
+Generate the Azure auth file (If you haven't installed [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) yet, please [install it](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)):
 
 ```
 az ad sp create-for-rbac -n "azure-dns-manager" --role contributor --sdk-auth true > ~/.config/azure-dns-manager/auth.json
